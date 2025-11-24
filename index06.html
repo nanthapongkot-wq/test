@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>นามบัตรดิจิทัล</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+
+.face {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.back {
+  transform: rotateY(180deg);
+}
+
+
+.back-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  z-index: 5; 
+}
+</style>
+</head>
+<body>
+
+<div class="card-container">
+  <div class="card">
+
+    
+    <img src="front.jpg" alt="หน้า" class="face front">
+
+    
+    <img src="back.jpg" alt="หลัง" class="face back">
+
+   
+    <a href="https://wa.me/66850188666" target="_blank" class="back-link"></a>
+
+  </div>
+</div>
+
+</body>
+</html>
